@@ -1,6 +1,4 @@
-app.get("/", (req, res) => {
-  res.send("Backend is running");
-});
+
 
 // backend/server.js
 const express = require("express");
@@ -14,6 +12,10 @@ dotenv.config();
 const app = express();
 app.use(express.json());
 app.use(cors());
+
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
 
 const client = new Groq({
   apiKey: process.env.GROQ_API_KEY
@@ -350,4 +352,5 @@ Rules/Examples:
 });
 
 app.listen(3001, () => console.log("Backend running on 3001"));
+
 
