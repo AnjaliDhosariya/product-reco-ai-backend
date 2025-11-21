@@ -1,3 +1,7 @@
+app.get("/", (req, res) => {
+  res.send("Backend is running");
+});
+
 // backend/server.js
 const express = require("express");
 const cors = require("cors");
@@ -346,3 +350,4 @@ Rules/Examples:
 });
 
 app.listen(3001, () => console.log("Backend running on 3001"));
+
